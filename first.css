@@ -1,0 +1,349 @@
+/* --- Color Variables --- */
+:root {
+    --color-black: #000000;
+    --color-yellow: #FFFF00; /* Bright Yellow */
+    --color-blue-accent: #00BFFF; /* Deep Sky Blue for Accents */
+    --color-gray: #1a1a1a;
+    --shadow-intensity: 0 0 5px var(--color-yellow), 0 0 10px var(--color-yellow), 0 0 20px var(--color-yellow), 0 0 40px rgba(255, 255, 0, 0.4);
+}
+
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark-theme {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0; /* Light text color on dark background */
+    background-color: var(--color-black); /* Solid Black Background */
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Neon Text Effect */
+.neon-text {
+    color: var(--color-yellow) !important;
+    text-shadow: var(--shadow-intensity);
+    transition: text-shadow 0.3s;
+}
+
+.neon-text:hover {
+    text-shadow: var(--shadow-intensity), 0 0 50px rgba(255, 255, 0, 0.6);
+}
+
+.accent-text {
+    color: var(--color-blue-accent);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--color-blue-accent);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-accent);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--color-yellow);
+    text-shadow: 0 0 5px var(--color-yellow);
+}
+
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    background-color: var(--color-black);
+    border-bottom: 1px solid var(--color-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: var(--color-yellow);
+    text-shadow: 0 0 5px var(--color-yellow);
+}
+
+/* --- Hero Section Styling --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-top: 80px; 
+    position: relative;
+    background-color: var(--color-black);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--color-yellow);
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px var(--color-yellow);
+}
+
+.summary {
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: #ccc;
+}
+
+.image-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Metallic/Glossy Border Effect */
+    border: 5px solid var(--color-blue-accent);
+    box-shadow: 0 0 20px var(--color-blue-accent), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s;
+}
+
+.image-content img:hover {
+    box-shadow: 0 0 30px var(--color-yellow), inset 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Scroll Down Arrow (Blue Metallic) */
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem; /* Slightly larger icon */
+    color: var(--color-blue-accent);
+    /* 3D/Glossy Icon look */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-blue-accent);
+    animation: bounce 2s infinite;
+}
+
+/* --- Projects Section Styling --- */
+.projects {
+    padding: 80px 0;
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-gray);
+}
+
+.projects h2, .contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--color-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+    border: 1px solid var(--color-blue-accent);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px var(--color-yellow);
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+.project-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    justify-content: space-between;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.github-link {
+    align-self: flex-start;
+    padding: 5px 10px;
+    border: 1px solid var(--color-yellow);
+    border-radius: 4px;
+    color: var(--color-yellow);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--color-yellow);
+}
+
+.github-link:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    text-shadow: none;
+}
+
+.contact-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Neon Button Style */
+.neon-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid var(--color-yellow);
+    color: var(--color-yellow);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: var(--shadow-intensity);
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+}
+
+.neon-button:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    box-shadow: none;
+}
+
+/* --- Contact Section Styling --- */
+.contact {
+    padding: 80px 0;
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-gray);
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    background-color: var(--color-gray);
+    border: 1px solid var(--color-blue-accent);
+    border-radius: 5px;
+    color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-item:hover {
+    background-color: var(--color-blue-accent);
+    color: var(--color-black);
+}
+
+/* 3D Glossy Icon Styling */
+.contact-item i {
+    font-size: 2rem; /* Large icons */
+    color: var(--color-blue-accent);
+    /* 3D/Metallic look */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 10px var(--color-blue-accent);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s;
+}
+
+.contact-item:hover i {
+    color: var(--color-yellow);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 15px var(--color-yellow);
+}
+
+/* --- Media Queries (Keep standard responsiveness) --- */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

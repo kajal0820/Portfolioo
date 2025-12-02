@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajal | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="first.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS adjustments needed for the requested structural changes */
+        /* Assuming 'first.css' handles the 'dark-theme' and 'neon-text' */
+
+        /* 1. Adjust Hero Content for new layout (Image left, Text right) */
+        .hero-content {
+            display: flex;
+            flex-direction: row-reverse; /* Reverses the order: Text on the right, Image on the left */
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 50px;
+        }
+
+        /* 2. Adjust Text Content (the right side) */
+        .hero-content .text-content {
+            flex: 1;
+            text-align: right; /* Align text to the top right */
+            padding-left: 20px;
+        }
+        
+        /* 3. Make the name larger */
+        .hero-content .text-content h1 {
+            font-size: 3.5em; /* Significantly larger */
+            margin-bottom: 5px;
+        }
+
+        /* 4. Adjust Image Content (the left side) */
+        .hero-content .image-content {
+            flex: 0 0 40%; /* Adjust width for the image */
+            text-align: left;
+        }
+        
+        /* Styling for the centered quote */
+        .mantra-section {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .mantra-quote {
+            font-size: 1.5em; /* Larger quote */
+            font-weight: bold; /* Bold */
+            font-style: italic; /* Cursive/Italic */
+            margin: 0 auto;
+            max-width: 900px;
+            line-height: 1.5;
+            color: var(--neon-color, #00ffff); /* Fallback color */
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6); 
+            border-radius: 10px;
+        }
+        
+        /* NEW SKILLS SECTION STYLING */
+        .skills-grid {
+            display: flex; /* Enables horizontal layout */
+            flex-wrap: wrap;
+            justify-content: center; /* Centers the skill items */
+            gap: 40px; /* Adds space between items */
+            padding: 20px 0;
+        }
+
+        .skill-item {
+            text-align: center;
+            width: 100px; /* Fixed width for consistent spacing */
+        }
+
+        .skill-icon {
+            width: 60px; /* Size of the icon image */
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 5px var(--accent-color, #00ffff)); /* Subtle neon glow for icons */
+            transition: transform 0.2s;
+        }
+
+        .skill-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-item p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: var(--text-color, #fff); /* Ensure text is visible */
+        }
+    </style>
+</head>
+<body class="dark-theme"> 
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo neon-text">Kajal Dubey</a>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="F:\Project\PortfolioDAkajal\danalyticisnternkajal.pdf" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="text-content">
+                <h1 class="neon-text">Hi, I am Kajal Dubey</h1>
+                <p class="tagline">Aspiring Data Analyst</p>
+                <p class="summary">
+                    Final-year IMCA student with strong skills in Data Analysis, Power BI, Tableau, SQL, Python, and Excel. Experienced in building interactive dashboards, analyzing business trends, and translating complex datasets into clear, actionable insights. Passionate about data storytelling, problem-solving, and driving data-driven decision-making. Adept at identifying patterns, improving operational efficiency, and delivering meaningful visualizations to support business growth
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="F:\Project\PortfolioDAkajal\WhatsApp Image 2025-09-27 at 15.58.27_ab386a4f.jpg" alt="Kajal's Profile Photo">
+            </div>
+        </div>
+    </section>
+
+    <section class="mantra-section">
+        <div class="container">
+            <p class="mantra-quote">
+                I extract knowledge from every experience, transform it with curiosity and discipline, and load it into meaningful action—turning raw moments into insight, and insight into impact.
+            </p>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="neon-text">SKILLS</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-item">
+                    <img src="icons8-python-48.png" alt="Python Icon" class="skill-icon">
+                    <p>PYTHON</p>
+                </div>
+                
+                <div class="skill-item">
+                    <img src="logo-mysql-170x115.png" alt="SQL Icon" class="skill-icon">
+                    <p>SQL</p>
+                </div>
+                
+                <div class="skill-item">
+                    <img src="F:\Project\PortfolioDAkajal\icons8-power-bi-2021-48.png" alt="Power BI Icon" class="skill-icon">
+                    <p>POWER BI</p>
+                </div>
+
+                <div class="skill-item">
+                    <img src="F:\Project\PortfolioDAkajal\icons8-excel-48.png" alt="Excel Icon" class="skill-icon">
+                    <p>EXCEL</p>
+                </div>
+                
+                <div class="skill-item">
+                    <img src="F:\Project\PortfolioDAkajal\icons8-tableau-software-48.png" alt="Tableau Icon" class="skill-icon">
+                    <p>TABLEAU</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="neon-text">📊 My Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <a href="project1_live_link" target="_blank" class="project-link">
+                        <img src="ola data analysis.png" alt="Screenshot of Project 1" class="project-screenshot">
+                    </a>
+                    <div class="project-details">
+                        <p class="description">
+                            <span class="accent-text">Project 1: Ola Data Analysis Project</span> Developed an interactive Power BI dashboard analyzing ride volume, booking status, cancellation factors, revenue by payment method, and customer–driver ratings. Identified peak demand, vehicle-type preferences, and major cancellation reasons while uncovering insights to improve operational efficiency and financial strategy
+                        </p>
+                        <a href="Ola-Data-Analysis-Dashboard.png" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <a href="project2_live_link" target="_blank" class="project-link">
+                        <img src="Customer Behaviour.png" alt="Screenshot of Project 2" class="project-screenshot">
+                    </a>
+                    <div class="project-details">
+                        <p class="description">
+                            <span class="accent-text">Project 2: Customer Churn Analysis with Python</span> The Customer Behaviour Analysis project demonstrates a complete data analytics lifecycle — from importing and cleaning raw data to performing Exploratory Data Analysis (EDA), running SQL queries for deeper insights, and visualizing key trends using Power BI. The main objective is to understand customer purchasing patterns, identify high-value segments, and uncover actionable insights that drive better business decisions.
+
+
+                        <a href="https://github.com/kajal0820/customer_behaviour_analysis" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="project3_live_link" target="_blank" class="project-link">
+                        <img src="blinkit.png" alt="Screenshot of Project 3" class="project-screenshot">
+                    </a>
+                    <div class="project-details">
+                        <p class="description">
+                            <span class="accent-text">Project 3: Blinkit-Sales-Analysis-End-to-End-Power-BI-Project</span> Developed a Power BI dashboard for Blinkit analyzing sales performance, order frequency, delivery efficiency, and customer demographics. Identified top-selling products, peak ordering hours, and city-wise demand while uncovering insights to improve inventory planning, delivery speed, and overall operational efficiency
+                        <a href="https://github.com/kajal0820/Blinkit-Sales-Analysis-End-to-End-Power-BI-Project" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <a href="https://public.tableau.com/app/profile/kajal.dubey8581/viz/StakeholderInsightsandPerformanceDashboard_17643231399200/Dashboard1?publish=yes" target="_blank" class="project-link">
+                        <img src="F:\Project\PortfolioDAkajal\tableaustakeholder.png" alt="Screenshot of Project 4" class="project-screenshot">
+                    </a>
+                    <div class="project-details">
+                        <p class="description">
+                            <span class="accent-text">Project 4: Stakeholder Insights And Performance Dashboard</span> An interactive Tableau dashboard providing stakeholder and insurer performance insights through premium trends, profitability analysis, shareholding patterns, and asset distribution. Includes dynamic filters, KPIs, interactive visuals, and PDF export features to support data-driven decision-making and enhance transparency across cities, policy tenure, demographics, and insurer value creation.
+                        <a href="project4_github_link" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+            </div> <div class="contact-cta">
+                <a href="#contact" class="button neon-button">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="neon-text">📫 Get In Touch</h2>
+            <p>I'm always open to discussing new data challenges and opportunities.</p>
+            <div class="contact-links">
+                <a href="mailto:kdkajaldubey2008@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> kdkajaldubey2008@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/kaajal-dubey" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="https://github.com/kajal0820" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="first.js"></script>
+</body>
+</html>
